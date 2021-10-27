@@ -20,7 +20,7 @@ async def on_message(ctx):
         i = (ctx.author.guild_permissions.administrator)
         if i is True:
             notice = ctx.content[4:]
-            channel = bot.get_channel(886835733682327562)
+            channel = bot.get_channel(전송될 채널ID)
             embed = discord.Embed(title="📢 **공지사항**", description="{}".format(notice),timestamp=datetime.datetime.now(pytz.timezone('UTC')), color=0x7289DA)
             embed.set_footer(text="공지 발송자: {}".format(ctx.author), icon_url=ctx.author.avatar_url)
             await channel.send ("@everyone", embed=embed)
